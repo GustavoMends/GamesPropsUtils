@@ -73,6 +73,7 @@ public class GamesPropsUtils {
     private static final Map<String, Object> propsToChange11T;
     private static final String[] packagesToChange11T = {
     	    "com.tencent.tmgp.sgame",
+            "com.levelinfinite.hotta.gp",
             "com.mobile.legends",
             "com.vng.mlbbvn"
     };
