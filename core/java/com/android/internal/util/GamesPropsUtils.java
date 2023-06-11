@@ -29,11 +29,6 @@ public class GamesPropsUtils {
     private static final String TAG = GamesPropsUtils.class.getSimpleName();
     private static final boolean DEBUG = false;
 
-    private static final Map<String, Object> propsToChangeROG1;
-    private static final String[] packagesToChangeROG1 = {
-            "com.madfingergames.legends"
-    };
-
     private static final Map<String, Object> propsToChangeROG3;
     private static final String[] packagesToChangeROG3 = {
     	    "com.ea.gp.fifamobile",
@@ -41,9 +36,14 @@ public class GamesPropsUtils {
             "com.pearlabyss.blackdesertm"
     };
 
+    private static final Map<String, Object> propsToChangeROG6;
+    private static final String[] packagesToChangeROG6 = {
+            "com.activision.callofduty.shooter",
+            "com.madfingergames.legends"
+    };
+
     private static final Map<String, Object> propsToChangeXP5;
     private static final String[] packagesToChangeXP5 = {
-            "com.activision.callofduty.shooter",
             "com.tencent.tmgp.kr.codm",
             "com.garena.game.codm",
             "com.vng.codmvn"
@@ -91,12 +91,12 @@ public class GamesPropsUtils {
     };
 
     static {
-        propsToChangeROG1 = new HashMap<>();
-        propsToChangeROG1.put("MODEL", "ASUS_Z01QD");
-        propsToChangeROG1.put("MANUFACTURER", "asus");
         propsToChangeROG3 = new HashMap<>();
         propsToChangeROG3.put("MODEL", "ASUS_I003D");
         propsToChangeROG3.put("MANUFACTURER", "asus");
+        propsToChangeROG6 = new HashMap<>();
+        propsToChangeROG6.put("MODEL", "ASUS_AI2201");
+        propsToChangeROG6.put("MANUFACTURER", "asus");
         propsToChangeXP5 = new HashMap<>();
         propsToChangeXP5.put("MODEL", "SO-52A");
         propsToChangeXP5.put("MANUFACTURER", "Sony");
@@ -121,21 +121,21 @@ public class GamesPropsUtils {
         if (packageName == null || packageName.isEmpty()) {
             return;
         }
-        if (Arrays.asList(packagesToChangeROG1).contains(packageName)){
-            if (DEBUG){
-                Log.d(TAG, "Defining props for: " + packageName);
-            }
-            for (Map.Entry<String, Object> prop : propsToChangeROG1.entrySet()) {
-                String key = prop.getKey();
-                Object value = prop.getValue();
-                setPropValue(key, value);
-            }
-        }
         if (Arrays.asList(packagesToChangeROG3).contains(packageName)){
             if (DEBUG){
                 Log.d(TAG, "Defining props for: " + packageName);
             }
             for (Map.Entry<String, Object> prop : propsToChangeROG3.entrySet()) {
+                String key = prop.getKey();
+                Object value = prop.getValue();
+                setPropValue(key, value);
+            }
+        }
+        if (Arrays.asList(packagesToChangeROG6).contains(packageName)){
+            if (DEBUG){
+                Log.d(TAG, "Defining props for: " + packageName);
+            }
+            for (Map.Entry<String, Object> prop : propsToChangeROG6.entrySet()) {
                 String key = prop.getKey();
                 Object value = prop.getValue();
                 setPropValue(key, value);
