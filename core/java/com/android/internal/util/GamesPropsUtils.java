@@ -77,8 +77,8 @@ public class GamesPropsUtils {
             "com.mobile.legends"
     };
 
-    private static final Map<String, Object> propsToChange11T;
-    private static final String[] packagesToChange11T = {
+    private static final Map<String, Object> propsToChange11TP;
+    private static final String[] packagesToChange11TP = {
             "com.ea.gp.apexlegendsmobilefps",
             "com.levelinfinite.hotta.gp",
             "com.vng.mlbbvn"
@@ -106,9 +106,9 @@ public class GamesPropsUtils {
         propsToChangeOP9P = new HashMap<>();
         propsToChangeOP9P.put("MODEL", "LE2101");
         propsToChangeOP9P.put("MANUFACTURER", "OnePlus");
-        propsToChange11T = new HashMap<>();
-        propsToChange11T.put("MODEL", "21081111RG");
-        propsToChange11T.put("MANUFACTURER", "Xiaomi");
+        propsToChange11TP = new HashMap<>();
+        propsToChange11TP.put("MODEL", "2107113SI");
+        propsToChange11TP.put("MANUFACTURER", "Xiaomi");
         propsToChangeF4 = new HashMap<>();
         propsToChangeF4.put("MODEL", "22021211RG");
         propsToChangeF4.put("MANUFACTURER", "Xiaomi");
@@ -171,11 +171,11 @@ public class GamesPropsUtils {
                 setPropValue(key, value);
             }
         }
-        if (Arrays.asList(packagesToChange11T).contains(packageName)){
+        if (Arrays.asList(packagesToChange11TP).contains(packageName)){
             if (DEBUG){
                 Log.d(TAG, "Defining props for: " + packageName);
             }
-            for (Map.Entry<String, Object> prop : propsToChange11T.entrySet()) {
+            for (Map.Entry<String, Object> prop : propsToChange11TP.entrySet()) {
                 String key = prop.getKey();
                 Object value = prop.getValue();
                 setPropValue(key, value);
