@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,9 +34,22 @@ public class GamesPropsUtils {
     private static final Map<String, String[]> packagesToChange = new HashMap<>();
 
     static {
+        propsToChange.put("BS4", createBS4Props());
+        packagesToChange.put("BS4", new String[]{
+                "com.proximabeta.mf.uamo"
+        });
+
         propsToChange.put("F4", createF4Props());
         packagesToChange.put("F4", new String[]{
                 "com.mobile.legends"
+        });
+
+        propsToChange.put("iQ11", createiQ11Props());
+        packagesToChange.put("iQ11", new String[]{
+                "com.tencent.KiHan",
+                "com.tencent.tmgp.cf",
+                "com.tencent.tmgp.cod",
+                "com.tencent.tmgp.gnyx"
         });
 
         propsToChange.put("MI11T", createMI11TProps());
@@ -49,6 +62,11 @@ public class GamesPropsUtils {
         packagesToChange.put("MI13P", new String[]{
                 "com.levelinfinite.sgameGlobal",
                 "com.tencent.tmgp.sgame"
+        });
+
+        propsToChange.put("NX729J", createNX729JProps());
+        packagesToChange.put("NX729J", new String[]{
+                "com.YoStar.AetherGazer"
         });
 
         propsToChange.put("OP8P", createOP8PProps());
@@ -78,7 +96,6 @@ public class GamesPropsUtils {
                 "com.pearlabyss.blackdesertm.gl"
         });
 
-
         propsToChange.put("ROG8", createROG8Props());
         packagesToChange.put("ROG8", new String[]{
                 "com.pubg.imobile",
@@ -98,11 +115,27 @@ public class GamesPropsUtils {
         });
     }
 
+    private static Map<String, Object> createBS4Props() {
+        Map<String, Object> props = new HashMap<>();
+        props.put("BRAND", "blackshark");
+        props.put("MANUFACTURER", "blackshark");
+        props.put("MODEL", "SHARK PRS-A0");
+        return props;
+    }
+
     private static Map<String, Object> createF4Props() {
         Map<String, Object> props = new HashMap<>();
         props.put("BRAND", "Xiaomi");
         props.put("MANUFACTURER", "Xiaomi");
         props.put("MODEL", "22021211RG");
+        return props;
+    }
+
+    private static Map<String, Object> createiQ11Props() {
+        Map<String, Object> props = new HashMap<>();
+        props.put("BRAND", "vivo");
+        props.put("MANUFACTURER", "vivo");
+        props.put("MODEL", "V2243A");
         return props;
     }
 
@@ -122,9 +155,19 @@ public class GamesPropsUtils {
         return props;
     }
 
+    private static Map<String, Object> createNX729JProps() {
+        Map<String, Object> props = new HashMap<>();
+        props.put("BRAND", "nubia");
+        props.put("DEVICE", "NX729J");
+        props.put("MANUFACTURER", "nubia");
+        props.put("MODEL", "NX729J");
+        return props;
+    }
+
     private static Map<String, Object> createOP8PProps() {
         Map<String, Object> props = new HashMap<>();
         props.put("BRAND", "OnePlus");
+        props.put("DEVICE", "OnePlus8Pro");
         props.put("MANUFACTURER", "OnePlus");
         props.put("MODEL", "IN2020");
         return props;
@@ -133,6 +176,7 @@ public class GamesPropsUtils {
     private static Map<String, Object> createOP9PProps() {
         Map<String, Object> props = new HashMap<>();
         props.put("BRAND", "OnePlus");
+        props.put("DEVICE", "OnePlus9Pro");
         props.put("MANUFACTURER", "OnePlus");
         props.put("MODEL", "LE2101");
         return props;
