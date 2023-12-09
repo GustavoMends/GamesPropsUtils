@@ -46,6 +46,14 @@ public class GamesPropsUtils {
                 "com.mobile.legends"
         });
 
+        propsToChange.put("iQ11", createiQ11Props());
+        packagesToChange.put("iQ11", new String[]{
+                "com.tencent.KiHan",
+                "com.tencent.tmgp.cf",
+                "com.tencent.tmgp.cod",
+                "com.tencent.tmgp.gnyx"
+        });
+
         propsToChange.put("MI11T", createMI11TProps());
         packagesToChange.put("MI11T", new String[]{
                 "com.levelinfinite.hotta.gp",
@@ -116,6 +124,14 @@ public class GamesPropsUtils {
         props.put("BRAND", "Xiaomi");
         props.put("MANUFACTURER", "Xiaomi");
         props.put("MODEL", "22021211RG");
+        return props;
+    }
+
+    private static Map<String, Object> createiQ11Props() {
+        Map<String, Object> props = new HashMap<>();
+        props.put("BRAND", "vivo");
+        props.put("MANUFACTURER", "vivo");
+        props.put("MODEL", "V2243A");
         return props;
     }
 
