@@ -89,7 +89,10 @@ public class GamesPropsUtils {
         propsToChange.put("ROG6", createROG6Props());
         packagesToChange.put("ROG6", new String[]{
                 "com.activision.callofduty.shooter",
-                "com.madfingergames.legends"
+                "com.madfingergames.legends",
+                "com.riotgames.league.teamfighttactics",
+                "com.riotgames.league.teamfighttacticstw",
+                "com.riotgames.league.teamfighttacticsvn"
         });
 
         propsToChange.put("XP5", createXP5Props());
