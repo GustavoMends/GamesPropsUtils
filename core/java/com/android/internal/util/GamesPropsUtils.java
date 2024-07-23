@@ -114,8 +114,8 @@ public class GamesPropsUtils {
 
         propsToChange.put("XP5", createXP5Props());
         packagesToChange.put("XP5", new String[]{
-                "com.tencent.tmgp.kr.codm",
                 "com.garena.game.codm",
+                "com.tencent.tmgp.kr.codm",
                 "com.vng.codmvn"
         });
     }
