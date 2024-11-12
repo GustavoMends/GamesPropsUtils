@@ -36,87 +36,87 @@ public class GamesPropsUtils {
     static {
         propsToChange.put("BS5P", createBS5PProps());
         packagesToChange.put("BS5P", new String[]{
-                "com.proximabeta.mf.uamo",
-                "com.tencent.tmgp.kr.codm",
-                "com.vng.codmvn"
+            "com.proximabeta.mf.uamo",
+            "com.tencent.tmgp.kr.codm",
+            "com.vng.codmvn"
         });
 
         propsToChange.put("F6P", createF6PProps());
         packagesToChange.put("F6P", new String[]{
-                "com.dts.freefire",
-                "com.dts.freefiremax",
-                "com.garena.game.codm",
-                "com.garena.game.kgvn",
-                "com.mobile.legends"
+            "com.dts.freefire",
+            "com.dts.freefiremax",
+            "com.garena.game.codm",
+            "com.garena.game.kgvn",
+            "com.mobile.legends"
         });
 
         propsToChange.put("GT6", createGT6Props());
         packagesToChange.put("GT6", new String[]{
-                "com.garena.game.lmjx",
-                "com.ngame.allstar.eu"
+            "com.garena.game.lmjx",
+            "com.ngame.allstar.eu"
         });
 
         propsToChange.put("iQ11", createiQ11Props());
         packagesToChange.put("iQ11", new String[]{
-                "com.tencent.KiHan",
-                "com.tencent.iglite",
-                "com.tencent.tmgp.cf",
-                "com.tencent.tmgp.cod",
-                "com.tencent.tmgp.gnyx"
+            "com.tencent.KiHan",
+            "com.tencent.iglite",
+            "com.tencent.tmgp.cf",
+            "com.tencent.tmgp.cod",
+            "com.tencent.tmgp.gnyx"
         });
 
         propsToChange.put("MI14P", createMI14PProps());
         packagesToChange.put("MI14P", new String[]{
-                "com.ea.gp.apexlegendsmobilefps",
-                "com.levelinfinite.hotta.gp",
-                "com.levelinfinite.sgameGlobal",
-                "com.mobilelegends.mi",
-                "com.supercell.clashofclans",
-                "com.tencent.tmgp.sgame",
-                "com.vng.mlbbvn"
+            "com.ea.gp.apexlegendsmobilefps",
+            "com.levelinfinite.hotta.gp",
+            "com.levelinfinite.sgameGlobal",
+            "com.mobilelegends.mi",
+            "com.supercell.clashofclans",
+            "com.tencent.tmgp.sgame",
+            "com.vng.mlbbvn"
         });
 
         propsToChange.put("OP12", createOP12Props());
         packagesToChange.put("OP12", new String[]{
-                "com.YoStar.AetherGazer",
-                "com.epicgames.fortnite",
-                "com.epicgames.portal",
-                "com.mojang.minecraftpe",
-                "com.riotgames.league.wildrift",
-                "com.riotgames.league.wildrifttw",
-                "com.riotgames.league.wildriftvn",
-                "com.tencent.lolm",
-                "jp.konami.pesam"
+            "com.YoStar.AetherGazer",
+            "com.epicgames.fortnite",
+            "com.epicgames.portal",
+            "com.mojang.minecraftpe",
+            "com.riotgames.league.wildrift",
+            "com.riotgames.league.wildrifttw",
+            "com.riotgames.league.wildriftvn",
+            "com.tencent.lolm",
+            "jp.konami.pesam"
         });
 
         propsToChange.put("ROG8", createROG8Props());
         packagesToChange.put("ROG8", new String[]{
-                "com.activision.callofduty.shooter",
-                "com.activision.callofudty.warzone",
-                "com.ea.game.nfs14_row",
-                "com.gameloft.android.ANMP.GloftA9HM",
-                "com.madfingergames.legends",
-                "com.pearlabyss.blackdesertm",
-                "com.pearlabyss.blackdesertm.gl",
-                "com.pubg.imobile",
-                "com.pubg.krmobile",
-                "com.rekoo.pubgm",
-                "com.riotgames.league.teamfighttactics",
-                "com.riotgames.league.teamfighttacticstw",
-                "com.riotgames.league.teamfighttacticsvn",
-                "com.tencent.ig",
-                "com.tencent.tmgp.pubgmhd",
-                "com.vng.pubgmobile",
-                "net.wargaming.wot.blitz"
+            "com.activision.callofduty.shooter",
+            "com.activision.callofudty.warzone",
+            "com.ea.game.nfs14_row",
+            "com.gameloft.android.ANMP.GloftA9HM",
+            "com.madfingergames.legends",
+            "com.pearlabyss.blackdesertm",
+            "com.pearlabyss.blackdesertm.gl",
+            "com.pubg.imobile",
+            "com.pubg.krmobile",
+            "com.rekoo.pubgm",
+            "com.riotgames.league.teamfighttactics",
+            "com.riotgames.league.teamfighttacticstw",
+            "com.riotgames.league.teamfighttacticsvn",
+            "com.tencent.ig",
+            "com.tencent.tmgp.pubgmhd",
+            "com.vng.pubgmobile",
+            "net.wargaming.wot.blitz"
         });
 
         propsToChange.put("S24U", createS24UProps());
         packagesToChange.put("S24U", new String[]{
-                "com.ea.gp.fifamobile",
-                "com.miraclegames.farlight84",
-                "com.netease.dbdena",
-                "com.netease.lztgglobal"
-                "vng.games.revelation.mobile"
+            "com.ea.gp.fifamobile",
+            "com.miraclegames.farlight84",
+            "com.netease.dbdena",
+            "com.netease.lztgglobal"
+            "vng.games.revelation.mobile"
         });
     }
 
