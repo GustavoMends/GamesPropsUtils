@@ -44,9 +44,9 @@ public class GamesPropsUtils {
 
     private static final Map<String, Object> propsToChangeXP5;
     private static final String[] packagesToChangeXP5 = {
-            "com.activision.callofduty.shooter",
-            "com.tencent.tmgp.kr.codm",
+            "com.activision.callofduty.shoote",
             "com.garena.game.codm",
+            "com.tencent.tmgp.kr.codm",
             "com.vng.codmvn"
     };
 
@@ -60,21 +60,25 @@ public class GamesPropsUtils {
             "com.tencent.tmgp.pubgmhd",
             "com.riotgames.league.wildrift",
             "com.riotgames.league.wildrifttw",
-            "com.riotgames.league.wildriftvn",
-            "com.netease.lztgglobal"
+            "com.riotgames.league.wildriftvn"
     };
 
     private static final Map<String, Object> propsToChangeOP9P;
     private static final String[] packagesToChangeOP9P = {
             "com.epicgames.fortnite",
-            "com.epicgames.portal"
+            "com.epicgames.portal",
+            "com.tencent.lolm"
     };
 
-    private static final Map<String, Object> propsToChange11T;
-    private static final String[] packagesToChange11T = {
+    private static final Map<String, Object> propsToChangeF4;
+    private static final String[] packagesToChangeF4 = {
+            "com.mobile.legends"
+    };
+
+    private static final Map<String, Object> propsToChange11TP;
+    private static final String[] packagesToChange11TP = {
     	    "com.tencent.tmgp.sgame",
             "com.levelinfinite.hotta.gp",
-            "com.mobile.legends",
             "com.vng.mlbbvn"
     };
 
@@ -100,12 +104,15 @@ public class GamesPropsUtils {
         propsToChangeOP9P = new HashMap<>();
         propsToChangeOP9P.put("MODEL", "LE2101");
         propsToChangeOP9P.put("MANUFACTURER", "OnePlus");
-        propsToChange11T = new HashMap<>();
-        propsToChange11T.put("MODEL", "21081111RG");
-        propsToChange11T.put("MANUFACTURER", "Xiaomi");
+        propsToChange11TP = new HashMap<>();
+        propsToChange11TP.put("MODEL", "2107113SI");
+        propsToChange11TP.put("MANUFACTURER", "Xiaomi");
         propsToChangeMI13P = new HashMap<>();
         propsToChangeMI13P.put("MANUFACTURER", "Xiaomi");
         propsToChangeMI13P.put("MODEL", "2210132C");
+        propsToChangeF4 = new HashMap<>();
+        propsToChangeF4.put("MODEL", "22021211RG");
+        propsToChangeF4.put("MANUFACTURER", "Xiaomi");
     }
 
     public static void setProps(String packageName) {
@@ -162,11 +169,11 @@ public class GamesPropsUtils {
                 setPropValue(key, value);
             }
         }
-        if (Arrays.asList(packagesToChange11T).contains(packageName)){
+        if (Arrays.asList(packagesToChange11TP).contains(packageName)){
             if (DEBUG){
                 Log.d(TAG, "Defining props for: " + packageName);
             }
-            for (Map.Entry<String, Object> prop : propsToChange11T.entrySet()) {
+            for (Map.Entry<String, Object> prop : propsToChange11TP.entrySet()) {
                 String key = prop.getKey();
                 Object value = prop.getValue();
                 setPropValue(key, value);
@@ -177,6 +184,16 @@ public class GamesPropsUtils {
                 Log.d(TAG, "Defining props for: " + packageName);
             }
             for (Map.Entry<String, Object> prop : propsToChangeMI13P.entrySet()) {
+                String key = prop.getKey();
+                Object value = prop.getValue();
+                setPropValue(key, value);
+            }
+        }
+        if (Arrays.asList(packagesToChangeF4).contains(packageName)){
+            if (DEBUG){
+                Log.d(TAG, "Defining props for: " + packageName);
+            }
+            for (Map.Entry<String, Object> prop : propsToChangeF4.entrySet()) {
                 String key = prop.getKey();
                 Object value = prop.getValue();
                 setPropValue(key, value);
