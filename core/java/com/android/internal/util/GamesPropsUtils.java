@@ -85,46 +85,59 @@ public class GamesPropsUtils {
     private static final String PACKAGE_TOWER_OF_FANTASY = "com.levelinfinite.hotta.gp";
 
     private static final Map<String, String> sOnePlusNineProProps = Map.of(
+            "PRODUCT", "OnePlus9Pro_EEA",
             "DEVICE", "OnePlus9Pro",
             "MANUFACTURER", "OnePlus",
             "BRAND", "OnePlus",
-            "MODEL", "LE2101"
+            "MODEL", "LE2123"
     );
 
-    private static final Map<String, String> sPocoFourProps = Map.of(
+    private static final Map<String, String> sPocoSixProProps = Map.of(
+            "PRODUCT", "vermeer",
+            "DEVICE", "23113RKC6G",
             "MANUFACTURER", "Xiaomi",
             "BRAND", "Xiaomi",
-            "MODEL", "22021211RG"
+            "MODEL", "23049PCD8G"
     );
 
     private static final Map<String, String> sRogPhoneOneProps = Map.of(
+            "PRODUCT", "WW_Z01QD",
+            "DEVICE", "ASUS_Z01QD_1",
             "MANUFACTURER", "asus",
             "BRAND", "asus",
             "MODEL", "ASUS_Z01QD"
     );
 
     private static final Map<String, String> sRogPhoneEightProps = Map.of(
+            "PRODUCT", "WW_AI2401_A",
+            "DEVICE", "ASUS_AI2401_A",
             "MANUFACTURER", "asus",
             "BRAND", "asus",
             "MODEL", "ASUS_AI2401_A"
     );
 
     private static final Map<String, String> sVivoElevenProps = Map.of(
+            "PRODUCT", "PD2243",
+            "DEVICE", "PD2243",
             "MANUFACTURER", "vivo",
             "BRAND", "vivo",
             "MODEL", "V2243A"
     );
 
-    private static final Map<String, String> sXiaomiThirteenProProps = Map.of(
+    private static final Map<String, String> sXiaomiFourProProps = Map.of(
+            "PRODUCT", "shennong",
+            "DEVICE", "shennong",
             "MANUFACTURER", "Xiaomi",
             "BRAND", "Xiaomi",
-            "MODEL", "2210132C"
+            "MODEL", "23116PN5BG"
     );
 
     private static final Map<String, String> sXperiaFiveProps = Map.of(
+            "PRODUCT", "XQ-DE54_EEA",
+            "DEVICE", "XQ-DE54",
             "MANUFACTURER", "Sony",
             "BRAND", "Sony",
-            "MODEL", "SO-52A"
+            "MODEL", "XQ-DE54"
     );
 
     public static void setProps(Context context) {
@@ -148,12 +161,11 @@ public class GamesPropsUtils {
             case PACKAGE_MOBILE_LEGENDS:
             case PACKAGE_MOBILE_LEGENDS_VN:
             case PACKAGE_TOWER_OF_FANTASY:
-                dlog("Spoofing POCO F4 for: " + packageName);
-                setProps(sPocoFourProps);
+                dlog("Spoofing POCO F6 Pro for: " + packageName);
+                setProps(sPocoSixProProps);
                 return;
             case PACKAGE_FREE_FIRE:
             case PACKAGE_FREE_FIRE_MAX:
-            case PACKAGE_SHADOWGUN_LEGENDS:
                 dlog("Spoofing RogPhone 1 for: " + packageName);
                 setProps(sRogPhoneOneProps);
                 return;
@@ -165,6 +177,7 @@ public class GamesPropsUtils {
             case PACKAGE_PUBG_MOBILE_KR:
             case PACKAGE_PUBG_MOBILE_TW:
             case PACKAGE_PUBG_MOBILE_VN:
+            case PACKAGE_SHADOWGUN_LEGENDS:
                 dlog("Spoofing RogPhone 8 for: " + packageName);
                 setProps(sRogPhoneEightProps);
                 return;
@@ -177,15 +190,15 @@ public class GamesPropsUtils {
             case PACKAGE_AETHER_GAZER:
             case PACKAGE_HONOR_OF_KINGS:
             case PACKAGE_HONOR_OF_KINGS_CN:
-                dlog("Spoofing Xiaomi 13 Pro for: " + packageName);
-                setProps(sXiaomiThirteenProProps);
+                dlog("Spoofing Xiaomi 14 Pro for: " + packageName);
+                setProps(sXiaomiFourProProps);
                 return;
             case PACKAGE_ARENA_BREAKOUT:
             case PACKAGE_COD_MOBILE:
             case PACKAGE_COD_MOBILE_AS:
             case PACKAGE_COD_MOBILE_KR:
             case PACKAGE_COD_MOBILE_VN:
-                dlog("Spoofing Sony Xperia 5 II for: " + packageName);
+                dlog("Spoofing Sony Xperia 5 V for: " + packageName);
                 setProps(sXperiaFiveProps);
                 return;
         }
