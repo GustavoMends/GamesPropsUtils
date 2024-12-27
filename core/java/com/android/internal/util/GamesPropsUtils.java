@@ -116,6 +116,14 @@ public class GamesPropsUtils {
             "MODEL", "ASUS_AI2401_A"
     );
 
+    private static final Map<String, String> sSamsungTwentyFourUltraProps = Map.of(
+            "PRODUCT", "e3qxeea",
+            "DEVICE", "SM-S928B",
+            "MANUFACTURER", "samsung",
+            "BRAND", "samsung",
+            "MODEL", "SM-S928B"
+    );
+
     private static final Map<String, String> sVivoElevenProps = Map.of(
             "PRODUCT", "PD2243",
             "DEVICE", "PD2243",
@@ -171,15 +179,18 @@ public class GamesPropsUtils {
                 return;
             case PACKAGE_BLACK_DESERT:
             case PACKAGE_BLACK_DESERT_KR:
+            case PACKAGE_SHADOWGUN_LEGENDS:
+                dlog("Spoofing RogPhone 8 for: " + packageName);
+                setProps(sRogPhoneEightProps);
+                return;
             case PACKAGE_PUBG_MOBILE:
             case PACKAGE_PUBG_MOBILE_CN:
             case PACKAGE_PUBG_MOBILE_IN:
             case PACKAGE_PUBG_MOBILE_KR:
             case PACKAGE_PUBG_MOBILE_TW:
             case PACKAGE_PUBG_MOBILE_VN:
-            case PACKAGE_SHADOWGUN_LEGENDS:
-                dlog("Spoofing RogPhone 8 for: " + packageName);
-                setProps(sRogPhoneEightProps);
+                dlog("Spoofing Samsung Galaxy S24 Ultra for: " + packageName);
+                setProps(sSamsungTwentyFourUltraProps);
                 return;
             case PACKAGE_COD_MOBILE_CN:
             case PACKAGE_HIGH_ENERGY_HEROES:
