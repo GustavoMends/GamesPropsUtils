@@ -84,12 +84,11 @@ public class GamesPropsUtils {
     private static final String PACKAGE_SHADOWGUN_LEGENDS = "com.madfingergames.legends";
     private static final String PACKAGE_TOWER_OF_FANTASY = "com.levelinfinite.hotta.gp";
 
-    private static final Map<String, String> sOnePlusNineProProps = Map.of(
-            "PRODUCT", "OnePlus9Pro_EEA",
-            "DEVICE", "OnePlus9Pro",
+    private static final Map<String, String> sOnePlusNineProps = Map.of(
+            "DEVICE", "OnePlus9R",
             "MANUFACTURER", "OnePlus",
             "BRAND", "OnePlus",
-            "MODEL", "LE2123"
+            "MODEL", "LE2101"
     );
 
     private static final Map<String, String> sPocoSixProProps = Map.of(
@@ -163,8 +162,8 @@ public class GamesPropsUtils {
             case PACKAGE_LEAGUE_OF_LEGENDS_CN:
             case PACKAGE_LEAGUE_OF_LEGENDS_TW:
             case PACKAGE_LEAGUE_OF_LEGENDS_VN:
-                dlog("Spoofing OnePlus 9 Pro for: " + packageName);
-                setProps(sOnePlusNineProProps);
+                dlog("Spoofing OnePlus 9R for: " + packageName);
+                setProps(sOnePlusNineProps);
                 return;
             case PACKAGE_MOBILE_LEGENDS:
             case PACKAGE_MOBILE_LEGENDS_VN:
