@@ -72,6 +72,13 @@ public class GamesPropsUtils {
   private static final String PACKAGE_SHADOWGUN_LEGENDS = "com.madfingergames.legends";
   private static final String PACKAGE_TOWER_OF_FANTASY = "com.levelinfinite.hotta.gp";
 
+  private static final Map<String, String> sLenovoLegionProps =
+      Map.of(
+          "DEVICE", "TB-9707F",
+          "MANUFACTURER", "Lenovo",
+          "BRAND", "Lenovo",
+          "MODEL", "Lenovo TB-9707F");
+
   private static final Map<String, String> sOnePlusNineProps =
       Map.of(
           "DEVICE", "OnePlus9R",
@@ -144,6 +151,13 @@ public class GamesPropsUtils {
     }
 
     switch (packageName) {
+      case PACKAGE_COD_MOBILE:
+      case PACKAGE_COD_MOBILE_AS:
+      case PACKAGE_COD_MOBILE_KR:
+      case PACKAGE_COD_MOBILE_VN:
+        dlog("Spoofing Lenovo Legion Y700 for: " + packageName);
+        setProps(sLenovoLegionProps);
+        return;
       case PACKAGE_EPICGAMES_LAUNCHER:
       case PACKAGE_FORTNITE:
       case PACKAGE_LEAGUE_OF_LEGENDS:
@@ -192,10 +206,6 @@ public class GamesPropsUtils {
         setProps(sXiaomiFourProProps);
         return;
       case PACKAGE_ARENA_BREAKOUT:
-      case PACKAGE_COD_MOBILE:
-      case PACKAGE_COD_MOBILE_AS:
-      case PACKAGE_COD_MOBILE_KR:
-      case PACKAGE_COD_MOBILE_VN:
         dlog("Spoofing Sony Xperia 5 V for: " + packageName);
         setProps(sXperiaFiveProps);
         return;
