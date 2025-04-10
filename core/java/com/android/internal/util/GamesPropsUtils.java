@@ -42,6 +42,7 @@ public class GamesPropsUtils {
   private static final String PACKAGE_COD_MOBILE_VN = "com.vng.codmvn";
 
   private static final String PACKAGE_FREE_FIRE = "com.dts.freefire";
+  private static final String PACKAGE_FREE_FIRE_IN = "com.garena.game.ffi";
   private static final String PACKAGE_FREE_FIRE_MAX = "com.dts.freefiremax";
 
   private static final String PACKAGE_EPICGAMES_LAUNCHER = "com.epicgames.portal";
@@ -93,14 +94,6 @@ public class GamesPropsUtils {
           "MANUFACTURER", "Xiaomi",
           "BRAND", "Xiaomi",
           "MODEL", "23049PCD8G");
-
-  private static final Map<String, String> sRogPhoneOneProps =
-      Map.of(
-          "PRODUCT", "WW_Z01QD",
-          "DEVICE", "ASUS_Z01QD_1",
-          "MANUFACTURER", "asus",
-          "BRAND", "asus",
-          "MODEL", "ASUS_Z01QD");
 
   private static final Map<String, String> sRogPhoneEightProps =
       Map.of(
@@ -155,6 +148,9 @@ public class GamesPropsUtils {
       case PACKAGE_COD_MOBILE_AS:
       case PACKAGE_COD_MOBILE_KR:
       case PACKAGE_COD_MOBILE_VN:
+      case PACKAGE_FREE_FIRE:
+      case PACKAGE_FREE_FIRE_IN:
+      case PACKAGE_FREE_FIRE_MAX:
         dlog("Spoofing Lenovo Legion Y700 for: " + packageName);
         setProps(sLenovoLegionProps);
         return;
@@ -172,11 +168,6 @@ public class GamesPropsUtils {
       case PACKAGE_TOWER_OF_FANTASY:
         dlog("Spoofing POCO F6 Pro for: " + packageName);
         setProps(sPocoSixProProps);
-        return;
-      case PACKAGE_FREE_FIRE:
-      case PACKAGE_FREE_FIRE_MAX:
-        dlog("Spoofing RogPhone 1 for: " + packageName);
-        setProps(sRogPhoneOneProps);
         return;
       case PACKAGE_BLACK_DESERT:
       case PACKAGE_BLACK_DESERT_KR:
