@@ -41,6 +41,7 @@ public class GamesPropsUtils {
   private static final String PACKAGE_COD_MOBILE_KR = "com.tencent.tmgp.kr.codm";
   private static final String PACKAGE_COD_MOBILE_VN = "com.vng.codmvn";
 
+  private static final String PACKAGE_DELTA_FORCE = "com.garena.game.df";
   private static final String PACKAGE_FREE_FIRE = "com.dts.freefire";
   private static final String PACKAGE_FREE_FIRE_MAX = "com.dts.freefiremax";
 
@@ -93,6 +94,14 @@ public class GamesPropsUtils {
           "MANUFACTURER", "Xiaomi",
           "BRAND", "Xiaomi",
           "MODEL", "23049PCD8G");
+
+  private static final Map<String, String> sRedMagicNineProProps =
+      Map.of(
+          "PRODUCT", "NX769J",
+          "DEVICE", "REDMAGIC 9 Pro",
+          "MANUFACTURER", "ZTE",
+          "BRAND", "nubia",
+          "MODEL", "NX769J");
 
   private static final Map<String, String> sRogPhoneOneProps =
       Map.of(
@@ -177,6 +186,10 @@ public class GamesPropsUtils {
       case PACKAGE_FREE_FIRE_MAX:
         dlog("Spoofing RogPhone 1 for: " + packageName);
         setProps(sRogPhoneOneProps);
+        return;
+      case PACKAGE_DELTA_FORCE:
+        dlog("Spoofing RedMagic 9 Pro for: " + packageName);
+        setProps(sRedMagicNineProProps);
         return;
       case PACKAGE_BLACK_DESERT:
       case PACKAGE_BLACK_DESERT_KR:
