@@ -103,13 +103,10 @@ public class GamesPropsUtils {
           "BRAND", "nubia",
           "MODEL", "NX769J");
 
-  private static final Map<String, String> sRogPhoneOneProps =
+  private static final Map<String, String> sRealmeFourteenProps =
       Map.of(
-          "PRODUCT", "WW_Z01QD",
-          "DEVICE", "ASUS_Z01QD_1",
-          "MANUFACTURER", "asus",
-          "BRAND", "asus",
-          "MODEL", "ASUS_Z01QD");
+          "MANUFACTURER", "realme",
+          "MODEL", "RMX5070");
 
   private static final Map<String, String> sRogPhoneEightProps =
       Map.of(
@@ -182,14 +179,14 @@ public class GamesPropsUtils {
         dlog("Spoofing POCO F6 Pro for: " + packageName);
         setProps(sPocoSixProProps);
         return;
-      case PACKAGE_FREE_FIRE:
-      case PACKAGE_FREE_FIRE_MAX:
-        dlog("Spoofing RogPhone 1 for: " + packageName);
-        setProps(sRogPhoneOneProps);
-        return;
       case PACKAGE_DELTA_FORCE:
         dlog("Spoofing RedMagic 9 Pro for: " + packageName);
         setProps(sRedMagicNineProProps);
+        return;
+      case PACKAGE_FREE_FIRE:
+      case PACKAGE_FREE_FIRE_MAX:
+        dlog("Spoofing Realme 14 5G for: " + packageName);
+        setProps(sRealmeFourteenProps);
         return;
       case PACKAGE_BLACK_DESERT:
       case PACKAGE_BLACK_DESERT_KR:
